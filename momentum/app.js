@@ -6,6 +6,8 @@ const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USER_NAME = "username";
 
+const savedUserName = localStorage.getItem(USER_NAME);
+
 // localStorage에 있는 username을 가져온 뒤, 텍스트로 표출함
 function paintGreetings(username) {
     greeting.innerText = `Hello ${username}`;
@@ -14,17 +16,14 @@ function paintGreetings(username) {
 
 function onLoginSubmit(event) {
     event.preventDefault();
-    
-    const username = loginInput.value;
-
     loginForm.classList.add(HIDDEN_CLASSNAME);
+
+    const username = loginInput.value;
     // localStorage에 아이템 저장하기
     localStorage.setItem(USER_NAME, username);
 
     paintGreetings(username);
 }
-
-const savedUserName = localStorage.getItem(USER_NAME);
 
 // localStorage에 아이템이 없는 경우, login form 양식을 화면에 표출함
 if (savedUserName === null) {
