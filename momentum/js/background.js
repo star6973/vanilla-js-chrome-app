@@ -4,4 +4,5 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chosenImage}`;
 
-document.body.appendChild(bgImage);
+document.body.appendChild(bgImage); // 맨 뒤에 위치
+// document.body.prepend(bgImage); // 맨 위에 위치
