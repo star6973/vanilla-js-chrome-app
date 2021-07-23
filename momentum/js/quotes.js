@@ -1,4 +1,4 @@
-const quotes = [
+const quotesList = [
     {
         quote: "I never dreamed about success, I worked for it.",
         author: "Estee Lauder"
@@ -49,11 +49,8 @@ const quotes = [
         author: "Jim Rohn"
     }
 ]
-const QUOTES_LENGHT = quotes.length;
+const QUOTES_LENGHT = quotesList.length;
+const todayQuotes = quotesList[Math.round(Math.random() * QUOTES_LENGHT)];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
-const todayQuotes = quotes[Math.round(Math.random() * QUOTES_LENGHT)];
-
-quote.innerHTML = todayQuotes["quote"];
-author.innerHTML = todayQuotes["author"];
+quotesText.innerHTML = todayQuotes["quote"];
+quotesAuthor.innerHTML = todayQuotes["author"];

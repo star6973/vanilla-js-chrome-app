@@ -14,8 +14,8 @@ function onGeoSuccess(position) {
     fetch(url)
     .then(response => response.json()) // response 결과를 json 형태로 변환해서 받아옴.
     .then(data => {
-        const weatherContainer = document.querySelector("#weather span:first-child");
-        const cityContainer = document.querySelector("#weather span:last-child");
+        const weatherContainer = document.querySelector("#wrapper-geo span:first-child");
+        const cityContainer = document.querySelector("#wrapper-geo span:last-child");
         // const cityContainer = document.querySelector("#weather span:first-child").nextElementSibling; // 이렇게 작성해도 됨.
         const weather = data.weather[0].main;
         const city = data.name;

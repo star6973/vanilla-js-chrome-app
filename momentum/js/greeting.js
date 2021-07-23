@@ -1,17 +1,11 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
-const link = document.querySelector("a");
-const greeting = document.querySelector("#greeting");
-
 const HIDDEN_CLASSNAME = "hidden";
 const USER_NAME = "username";
-
 const savedUserName = localStorage.getItem(USER_NAME);
 
 // localStorage에 있는 username을 가져온 뒤, 텍스트로 표출함
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
+    loginOutput.innerText = `Hello ${username}`;
+    loginOutput.classList.remove(HIDDEN_CLASSNAME);
 }
 
 function onLoginSubmit(event) {
