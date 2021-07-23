@@ -14,14 +14,19 @@ function onGeoSuccess(position) {
     fetch(url)
     .then(response => response.json()) // response 결과를 json 형태로 변환해서 받아옴.
     .then(data => {
-        const weatherContainer = document.querySelector("#wrapper-geo span:first-child");
-        const cityContainer = document.querySelector("#wrapper-geo span:last-child");
-        // const cityContainer = document.querySelector("#weather span:first-child").nextElementSibling; // 이렇게 작성해도 됨.
-        const weather = data.weather[0].main;
-        const city = data.name;
+        const weatherContainer = document.querySelector("#wrapper-geo span:nth-child(1)")
+        const degreeContainer = document.querySelector("#wrapper-geo span:nth-child(2)")
+        const cityContainer = document.querySelector("#wrapper-geo span:nth-child(3)")
 
-        weatherContainer.innerText = `${weather} / ${data.main.temp}`;
-        cityContainer.innerText = city;
+        const weather = data.weather[0].main
+        const degree = data.main.temp
+        const city = data.name
+
+        const degreeUnicode = String.fromCodePoint(8451)
+
+        weatherContainer.innerText = `${weather}`
+        degreeContainer.innerText = `${degree}${degreeUnicode}`
+        cityContainer.innerText = `${city}`
     });
 }
 
