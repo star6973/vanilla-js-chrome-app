@@ -1,0 +1,20 @@
+.hidden {
+    display: none;
+}
+
+::placeholder {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#todo-list li button {
+    margin-left: 10px;
+    padding: 0px;
+    margin-left: 10px;
+    color: red;
+    cursor: pointer;
+    transition: all 0.1s ease 0s;
+    background: none;
+    border: none;
+}
