@@ -50,7 +50,20 @@ const quotesList = [
     }
 ]
 const QUOTES_LENGHT = quotesList.length;
-const todayQuotes = quotesList[Math.round(Math.random() * QUOTES_LENGHT)];
+const todayQuotes = quotesList[Math.floor(Math.random() * QUOTES_LENGHT)];
 
 quotesText.innerHTML = todayQuotes["quote"];
-quotesAuthor.innerHTML = todayQuotes["author"];
+quotesAuthor.innerHTML = `- ${todayQuotes["author"]} -`;
+
+// quotes css style
+quotes.style.height = "30%"
+quotes.style.display = "flex"
+quotes.style.flexDirection = "column"
+quotes.style.textAlign = "center"
+
+quotesText.style.fontSize = "40px"
+quotesText.style.fontFamily = "Fantasy"
+
+quotesAuthor.style.fontSize = "22px"
+quotesAuthor.style.fontFamily = "Fantasy"
+quotesAuthor.style.marginTop = "20px"

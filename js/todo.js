@@ -39,7 +39,7 @@ function paintToDo(newToDoObj) {
     li.id = newToDoObj.id;
     span.innerText = newToDoObj.text;
     button.innerText = "X";
-
+    
     button.addEventListener("click", deleteToDo);
 
     li.appendChild(span); // <li> 태그 안에 <span> 태그를 자식으로 넣어준다.
@@ -71,3 +71,16 @@ if (savedToDos !== null) {
     // parsedToDos.forEach((item) => console.log(`this is the turn of ${item}`));
     parsedToDos.forEach(paintToDo);
 }
+
+// todo css style
+toDoWrapper.style.height = "70%"
+toDoWrapper.style.alignSelf = "center"
+toDoWrapper.style.marginBottom = "130px"
+
+toDoInput.style.width = "250px"
+toDoInput.style.backgroundColor = "transparent"
+toDoInput.style.border = "none"
+toDoInput.style.borderBottom = "solid"
+toDoInput.style.textAlign = "center"
+toDoInput.style.autofocus = false
+toDoInput.style.transition = "all 0.3s ease"

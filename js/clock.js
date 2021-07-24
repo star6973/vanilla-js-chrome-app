@@ -9,3 +9,9 @@ function getClock() {
 
 getClock();
 setInterval(getClock, 1000);
+
+// clock css style
+clock.style.textAlign = "center"
+clock.style.fontFamily = "Fantasy"
+clock.style.fontSize = "80px"
+clock.style.paddingTop = "20px"
