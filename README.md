@@ -1,4 +1,4 @@
-# vanillajs_chrome_app
+# vanillajs-chrome-app
 ## Description
 - 바닐라 JS로 크롬 앱 만들기
 - 나만의 todo 리스트
